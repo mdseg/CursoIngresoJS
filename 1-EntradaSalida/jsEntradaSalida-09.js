@@ -8,23 +8,26 @@ function mostrarAumento() {
 
     var sueldoInicial;
     var aumento;
-    var sueldoFinal;
+    var sueldoConAumento;
+    var sueldoAdicional;
 
     // Iniciacion de variables
 
     sueldoInicial = txtIdSueldo.value;
-    aumento = 0.10;
-
+    aumento = 0.1;
+    sueldoAdicional;
     // Aplicamos parseInt a sueldoInicial
 
     sueldoInicial = parseInt(sueldoInicial);
+    sueldoAdicional = sueldoInicial * aumento;
+    // Calculamos el sueldoConAumento sumando el valor de la variable aumento * sueldoInicial
+    alert(`Aumento: ${sueldoAdicional}`);
+    sueldoConAumento = sueldoInicial + sueldoAdicional;
 
-    // Calculamos el sueldoFinal sumando el valor de la variable aumento * sueldoInicial
 
-    sueldoFinal = sueldoInicial + sueldoInicial * aumento;
 
     // Mostramos el resultado en pantalla
 
-    txtIdResultado.value = sueldoFinal;
+    txtIdResultado.value = sueldoConAumento;
 
 }

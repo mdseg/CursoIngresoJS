@@ -26,6 +26,8 @@ function mostrarAumento() {
 
     importeConDescuento = importeInicial - descuento;
 
+    alert(`Descuento: ${descuento}`);
+
     // Mostramos el resultado en el objeto con Id txtIdResultado
 
     txtIdResultado.value = importeConDescuento;
