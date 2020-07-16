@@ -9,25 +9,14 @@ function mostrar() {
                 break;
             }
         case "Abril":
-            {
-                alert("El mes tiene 30 días");
-                break;
-            }
         case "Junio":
-            {
-                alert("El mes tiene 30 días");
-                break;
-            }
         case "Septiembre":
-            {
-                alert("El mes tiene 30 días");
-                break;
-            }
         case "Noviembre":
             {
                 alert("El mes tiene 30 días");
                 break;
             }
+
         default:
             {
                 alert("El mes tiene 31 días");

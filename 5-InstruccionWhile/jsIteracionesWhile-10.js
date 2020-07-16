@@ -10,20 +10,66 @@ hasta que el usuario quiera, mostrar:
 7-Promedio de positivos.
 8-Promedios de negativos.
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
-function mostrar()
-{
-	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+function mostrar() {
+    var cantidadPositivos = 0;
+    var cantidadNegativos = 0;
+    var cantidadCeros = 0;
+    var cantidadNumerosPares = 0;
+    var cantidadNumerosImpares = 0;
+    var promedioPositivos = 0;
+    var promedioNegativos = 0;
+    var acumuladorPositivos = 0;
+    var acumuladorNegativos = 0;
+    var diferenciaPositivosNegativos = 0;
+    var numeroIngresado = 0;
+    var resto = 0;
 
-	respuesta="si";
+    var respuesta
 
-	while(respuesta=="si")
-	{
-		
-		respuesta=prompt("desea continuar?");
-	}//fin del while
+    respuesta = 'si';
+    while (respuesta == 'si') {
+        numeroIngresado = prompt("Ingrese un numero");
+        numeroIngresado = parseInt(numeroIngresado);
 
-	document.write("la suma de negativos es :"+sumaNegativos);
-}//FIN DE LA FUNCIÓN
+        if (numeroIngresado > 0) {
+            cantidadPositivos++;
+            acumuladorPositivos += numeroIngresado;
+
+        } else if (numeroIngresado < 0) {
+            cantidadNegativos++;
+            acumuladorNegativos += numeroIngresado;
+        } else {
+            cantidadCeros++;
+
+        }
+        //Evaluar paridad
+        resto = numeroIngresado % 2;
+        if (resto != 0) {
+            cantidadNumerosImpares++;
+
+        } else {
+            cantidadNumerosPares++;
+        }
+
+        respuesta = prompt("¿Desea continuar? De ser así responda 'si'");
+
+
+    }
+
+    //Calculos Finales
+
+    promedioPositivos = acumuladorPositivos / cantidadPositivos;
+    promedioNegativos = acumuladorNegativos / cantidadNegativos;
+    diferenciaPositivosNegativos = cantidadPositivos - cantidadNegativos;
+
+    alert(
+        `
+		cantidad Positivos = ${cantidadPositivos}
+		cantidad Negativos = ${cantidadNegativos}
+		cantidad Ceros = ${cantidadCeros}
+		cantidad Numeros pares = ${cantidadNumerosPares}
+		cantidad Numeros Impares = ${cantidadNumerosImpares}
+		Promedio positivos = ${promedioPositivos}
+		Promedio negativos = ${promedioNegativos}
+		`)
+} //FIN DE LA FUNCIÓN

@@ -13,7 +13,7 @@ function mostrar() {
 
     // Consultamos si la edad esta entre 13 y 17 años
 
-    if (edad >= 13 && edad < 18) {
+    if (edad > 12 && edad < 18) {
         alert("La persona es adolescente");
     }
 

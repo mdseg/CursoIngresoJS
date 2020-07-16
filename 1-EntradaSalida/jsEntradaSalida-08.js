@@ -4,13 +4,14 @@ transformarlos a enteros (parseInt),realizar la operación correcta y
 mostrar el resto entre el dividendo y el divisor.
 ej.: "El resto es 0 ."*/
 function SacarResto() {
+
     //Variables
 
     var dividendo;
     var divisor;
     var resto;
 
-    //Iniciacion de dividendo y divisor con el valor de los ID
+    //Inicializacion de dividendo y divisor con el valor de los ID
 
     dividendo = txtIdNumeroDividendo.value;
     divisor = txtIdNumeroDivisor.value;
